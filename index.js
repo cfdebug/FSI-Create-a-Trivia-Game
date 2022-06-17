@@ -1,9 +1,11 @@
-// Your Code Here
+// Tag Definitions
 let username = window.prompt("Please Enter Your Name:");
 let userscore = 0;
 let playagain = true;
 
+// Main Function
 function playgame() {
+//For loop to display/answer questions and track score    
 for (let i = 0; i < questions.length; i++) {
     let question = questions[i];
     let useranswer = window.prompt(question.text);
@@ -11,9 +13,10 @@ for (let i = 0; i < questions.length; i++) {
         userscore = userscore + 10;
     };
 };
-
+// Score popup
 window.alert("Your score is: "+userscore);
 }
+//Play again popup
 while (playagain === true){
     playgame();
     let userchoice = window.prompt("Would you like to play the game again? Answer yes or no.");
