@@ -11,7 +11,7 @@ function playgame() {
 for (let i = 0; i < questions.length; i++) {
     let question = questions[i];
     let useranswer = window.prompt(question.text);
-    if(useranswer === question.correctAnswer){
+    if(useranswer.toLowerCase() === question.correctAnswer.toLowerCase()){
         console.log("Correct");
         userscore = userscore + 10;
     } else {
